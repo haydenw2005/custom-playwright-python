@@ -85,7 +85,9 @@ class AsyncBase(ImplWrapper):
     def remove_listener(self, event: Any, f: Any) -> None:
         """Removes the function ``f`` from ``event``."""
         self._impl_obj.remove_listener(event, self._wrap_handler(f))
-
+    def add_listener(self, event: Any, f: Any) -> None:
+        """Adds the function ``f`` to ``event``."""
+        self._impl_obj.add_listener(event, self._wrap_handler(f))
 
 class AsyncContextManager(AsyncBase):
     async def __aenter__(self: Self) -> Self:

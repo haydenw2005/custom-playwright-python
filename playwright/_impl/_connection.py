@@ -172,10 +172,17 @@ class ChannelOwner(AsyncIOEventEmitter):
                 ),
                 True,
             )
+    
+    def add_listener(self, event: str, f: Any) -> None:
+        super().add_listener(event, f)
+        #print("listeners" + str(self.listeners(event)))
+        if not self.listeners(event):
+            self._update_subscription(event, True)
 
     def _add_event_handler(self, event: str, k: Any, v: Any) -> None:
         if not self.listeners(event):
             self._update_subscription(event, True)
+        
         super()._add_event_handler(event, k, v)
 
     def remove_listener(self, event: str, f: Any) -> None:
