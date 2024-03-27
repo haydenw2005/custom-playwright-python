@@ -18,7 +18,6 @@ import inspect
 import json
 import json as json_utils
 import mimetypes
-import sys
 from collections import defaultdict
 from pathlib import Path
 from types import SimpleNamespace
@@ -30,15 +29,10 @@ from typing import (
     Dict,
     List,
     Optional,
+    TypedDict,
     Union,
     cast,
 )
-
-if sys.version_info >= (3, 8):  # pragma: no cover
-    from typing import TypedDict
-else:  # pragma: no cover
-    from typing_extensions import TypedDict
-
 from urllib import parse
 
 from playwright._impl._api_structures import (
@@ -175,7 +169,7 @@ class Request(ChannelOwner):
         if not post_data:
             return None
         content_type = self.headers["content-type"]
-        if content_type == "application/x-www-form-urlencoded":
+        if "application/x-www-form-urlencoded" in content_type:
             return dict(parse.parse_qsl(post_data))
         try:
             return json.loads(post_data)
@@ -268,7 +262,10 @@ class Request(ChannelOwner):
         return page._closed_or_crashed_future
 
     def _safe_page(self) -> "Optional[Page]":
-        return cast("Frame", from_channel(self._initializer["frame"]))._page
+        frame = from_nullable_channel(self._initializer.get("frame"))
+        if not frame:
+            return None
+        return cast("Frame", frame)._page
 
 
 class Route(ChannelOwner):
