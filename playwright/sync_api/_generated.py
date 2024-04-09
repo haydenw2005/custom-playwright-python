@@ -13096,6 +13096,41 @@ class BrowserContext(SyncContextManager):
         """
 
         return mapping.from_impl(self._sync(self._impl_obj.new_cdp_session(page=page)))
+    
+    def enable_recorder(
+        self,
+        language: str,
+        *,
+        mode: typing.Optional[str] = None,
+        output_file: typing.Optional[str] = None,
+        #hide_highlight: typing.Optional[bool] = None
+    ) -> None:
+        """BrowserContext.enable_recorder
+
+        Enables code generation recorder.
+
+        Parameters
+        ----------
+        language : str
+            Which programming language to generate in.
+        mode : Union[str, None]
+            Which mode to start recorder in: `recording` | `inspecting`.
+        output_file : Union[str, None]
+            Where to save generated code output.
+        hide_highlight : Union[bool, None]
+            Toggle the highlight view for user actions when recording
+        """
+
+        return mapping.from_maybe_impl(
+            self._sync(
+                self._impl_obj.enable_recorder(
+                    language=language,
+                    mode=mode,
+                    output_file=output_file,
+                 #   hide_highlight=hide_highlight,
+                )
+            )
+        )
 
 
 mapping.register(BrowserContextImpl, BrowserContext)

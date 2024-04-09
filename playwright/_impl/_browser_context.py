@@ -678,3 +678,35 @@ class BrowserContext(ChannelOwner):
     @property
     def request(self) -> "APIRequestContext":
         return self._request
+
+    async def enable_recorder(
+        self,
+        language: str,
+        # launchOptions: Optional[LaunchOptions],
+        # contextOptions: Optional[BrowserContextOptions],
+        # device: Optional[str],
+        # save_storage: Optional[str],
+        mode: Optional[str],  # 'recording' | 'inspecting',
+        # test_id_attribute_name: Optional[str],
+        output_file: Optional[str],
+        # handle_SIGINT: Optional[bool],
+        #hide_highlight: Optional[bool],
+    ) -> None:
+        params: Dict[str, Any] = {
+            "language": language,
+        }
+        # if device is not None:
+        #     params["device"] = device
+        # if save_storage is not None:
+        #     params["saveStorage"] = save_storage
+        if mode is not None:
+            params["mode"] = mode
+        # if test_id_attribute_name is not None:
+        #     params["testIdAttributeName"] = test_id_attribute_name
+        if output_file is not None:
+            params["outputFile"] = output_file
+       # if hide_highlight is not None:
+        #    params["hideHighlight"] = hide_highlight 
+        # if handle_SIGINT is not None:
+        #     params["handleSIGINT"] = handle_SIGINT
+        await self._channel.send("recorderSupplementEnable", params)
