@@ -13131,6 +13131,17 @@ class BrowserContext(SyncContextManager):
                 )
             )
         )
+    # def disable_recorder(self) -> None:
+    #     """BrowserContext.disable_recorder
+
+    #     Disables code generation recorder.
+
+    #     """
+    #     return mapping.from_maybe_impl(
+    #         self._sync(
+    #             self._impl_obj.disable_recorder()
+    #         )
+    #     )
 
 
 mapping.register(BrowserContextImpl, BrowserContext)

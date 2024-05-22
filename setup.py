@@ -30,7 +30,7 @@ except ImportError:
     InWheel = None
 from wheel.bdist_wheel import bdist_wheel as BDistWheelCommand
 
-driver_version = "1.43.0-beta-1711484700000"
+driver_version = "1.45.0-anam"
 
 
 def extractall(zip: zipfile.ZipFile, path: str) -> None:
@@ -46,7 +46,7 @@ def download_driver(zip_name: str) -> None:
     zip_file = f"playwright-{driver_version}-{zip_name}.zip"
     if os.path.exists("driver/" + zip_file):
         return
-    url = "https://playwright.azureedge.net/builds/driver/"
+    url = "https://anamplaywright.blob.core.windows.net/builds/driver/"
     if (
         "-alpha" in driver_version
         or "-beta" in driver_version
@@ -198,16 +198,16 @@ class PlaywrightBDistWheelCommand(BDistWheelCommand):
 
 
 setup(
-    name="playwright",
+    name="playwright-anam",
     author="Microsoft Corporation",
     author_email="",
     description="A high-level API to automate web browsers",
     long_description=Path("README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
     license="Apache-2.0",
-    url="https://github.com/Microsoft/playwright-python",
+    url="https://github.com/anamhira47/playwright-python",
     project_urls={
-        "Release notes": "https://github.com/microsoft/playwright-python/releases",
+        "Release notes": "https://github.com/anamhira47/playwright-python/releases",
     },
     packages=[
         "playwright",
