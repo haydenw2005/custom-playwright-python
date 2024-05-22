@@ -30,7 +30,7 @@ except ImportError:
     InWheel = None
 from wheel.bdist_wheel import bdist_wheel as BDistWheelCommand
 
-driver_version = "1.43.0-beta-1711484700000"
+driver_version = "1.45.0-anam"
 
 
 def extractall(zip: zipfile.ZipFile, path: str) -> None:
@@ -46,7 +46,7 @@ def download_driver(zip_name: str) -> None:
     zip_file = f"playwright-{driver_version}-{zip_name}.zip"
     if os.path.exists("driver/" + zip_file):
         return
-    url = "https://playwright.azureedge.net/builds/driver/"
+    url = "https://anamplaywright.blob.core.windows.net/builds/driver/"
     if (
         "-alpha" in driver_version
         or "-beta" in driver_version
