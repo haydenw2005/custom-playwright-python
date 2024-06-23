@@ -198,7 +198,7 @@ class PlaywrightBDistWheelCommand(BDistWheelCommand):
 
 
 setup(
-    name="playwright-anam",
+    name="playwright",
     author="Microsoft Corporation",
     author_email="",
     description="A high-level API to automate web browsers",
