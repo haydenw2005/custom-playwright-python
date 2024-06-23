@@ -200,6 +200,7 @@ class PlaywrightBDistWheelCommand(BDistWheelCommand):
 setup(
     name="playwright",
     author="Microsoft Corporation",
+    version="1.45.0"
     author_email="",
     description="A high-level API to automate web browsers",
     long_description=Path("README.md").read_text(encoding="utf-8"),
