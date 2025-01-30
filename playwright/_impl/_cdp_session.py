@@ -28,7 +28,9 @@ class CDPSession(ChannelOwner):
     def _on_event(self, params: Any) -> None:
         self.emit(params["method"], params["params"])
 
-    async def send(self, method: str, params: Dict = None) -> Dict:
+    async def send(
+        self, method: str, params: Dict = None, sessionId: str = None
+    ) -> Dict:
         return await self._channel.send("send", locals_to_params(locals()))
 
     async def detach(self) -> None:
