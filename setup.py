@@ -241,8 +241,8 @@ setup(
     cmdclass={"bdist_wheel": PlaywrightBDistWheelCommand},
     entry_points={
         "console_scripts": [
-            "playwright=playwright.__main__:main",
+            "custom-playwright=custom-playwright.__main__:main",
         ],
-        "pyinstaller40": ["hook-dirs=playwright._impl.__pyinstaller:get_hook_dirs"],
+        "pyinstaller40": ["hook-dirs=custom-playwright._impl.__pyinstaller:get_hook_dirs"],
     },
 )
