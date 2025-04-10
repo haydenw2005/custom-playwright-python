@@ -42,3 +42,16 @@ reportCallInDefaultInitializer = true
 reportOptionalSubscript = false
 reportUnboundVariable = false
 strictParameterNoneValue = false
+
+[tool.poetry]
+name = "custom-playwright"
+version = "0.1.0"
+description = "A custom fork of Playwright with recording extensions"
+authors = ["Your Name <you@example.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/haydenw2005/custom-playwright-python"
+repository = "https://github.com/haydenw2005/custom-playwright-python"
+
+[tool.poetry.scripts]
+custom-playwright = "custom_playwright.__main__:main"
