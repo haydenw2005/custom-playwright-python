@@ -15,15 +15,10 @@
 import subprocess
 import sys
 
-from custom_playwright._impl._driver import compute_driver_executable, get_driver_env
+from custom_playwright._impl._driver.install import main as install_main
 
-
-def main() -> None:
-    driver_executable, driver_cli = compute_driver_executable()
-    completed_process = subprocess.run(
-        [driver_executable, driver_cli, *sys.argv[1:]], env=get_driver_env()
-    )
-    sys.exit(completed_process.returncode)
+def main():
+    install_main()
 
 
 if __name__ == "__main__":
