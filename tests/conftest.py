@@ -27,7 +27,7 @@ from PIL import Image
 from pixelmatch import pixelmatch
 from pixelmatch.contrib.PIL import from_PIL_to_raw_data
 
-import playwright
+import custom_playwright
 from custom_playwright._impl._path_utils import get_file_dirname
 
 from .server import Server, WebSocketServerServer, test_server
@@ -228,7 +228,7 @@ class RemoteServer:
     def __init__(
         self, browser_name: str, launch_server_options: Dict, tmpfile: Path
     ) -> None:
-        driver_dir = Path(inspect.getfile(playwright)).parent / "driver"
+        driver_dir = Path(inspect.getfile(custom_playwright)).parent / "driver"
         if sys.platform == "win32":
             node_executable = driver_dir / "node.exe"
         else:

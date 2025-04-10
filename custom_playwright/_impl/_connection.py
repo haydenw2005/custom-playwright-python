@@ -36,7 +36,7 @@ from typing import (
 from pyee import EventEmitter
 from pyee.asyncio import AsyncIOEventEmitter
 
-import playwright
+import custom_playwright
 from custom_playwright._impl._errors import TargetClosedError, rewrite_error
 from custom_playwright._impl._greenlets import EventGreenlet
 from custom_playwright._impl._helper import Error, ParsedMessagePayload, parse_error
@@ -561,7 +561,7 @@ class ParsedStackTrace(TypedDict):
 def _extract_stack_trace_information_from_stack(
     st: List[inspect.FrameInfo], is_internal: bool
 ) -> ParsedStackTrace:
-    playwright_module_path = str(Path(playwright.__file__).parents[0])
+    playwright_module_path = str(Path(custom_playwright.__file__).parents[0])
     last_internal_api_name = ""
     api_name = ""
     parsed_frames: List[StackFrame] = []

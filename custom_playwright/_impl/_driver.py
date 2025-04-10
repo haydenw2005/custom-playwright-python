@@ -18,12 +18,12 @@ import sys
 from pathlib import Path
 from typing import Tuple
 
-import playwright
+import cuustom_playwright
 from custom_playwright._repo_version import version
 
 
 def compute_driver_executable() -> Tuple[str, str]:
-    driver_path = Path(inspect.getfile(playwright)).parent / "driver"
+    driver_path = Path(inspect.getfile(cuustom_playwright)).parent / "driver"
     cli_path = str(driver_path / "package" / "cli.js")
     if sys.platform == "win32":
         return (str(driver_path / "node.exe"), cli_path)
