@@ -211,11 +211,11 @@ setup(
         "Release notes": "https://github.com/haydenw2005/custom-playwright-python/releases",
     },
     packages=[
-        "playwright",
-        "playwright.async_api",
-        "playwright.sync_api",
-        "playwright._impl",
-        "playwright._impl.__pyinstaller",
+        "custom_playwright",
+        "custom_playwright.async_api",
+        "custom_playwright.sync_api",
+        "custom_playwright._impl",
+        "custom_playwright._impl.__pyinstaller",
     ],
     include_package_data=True,
     install_requires=[
