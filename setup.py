@@ -198,16 +198,16 @@ class PlaywrightBDistWheelCommand(BDistWheelCommand):
 
 
 setup(
-    name="playwright",
+    name="custom-playwright",
     author="Microsoft Corporation",
     author_email="",
     description="A high-level API to automate web browsers",
     long_description=Path("README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
     license="Apache-2.0",
-    url="https://github.com/anamhira47/playwright-python",
+    url="https://github.com/haydenw2005/custom-playwright-python",
     project_urls={
-        "Release notes": "https://github.com/anamhira47/playwright-python/releases",
+        "Release notes": "https://github.com/haydenw2005/custom-playwright-python/releases",
     },
     packages=[
         "playwright",

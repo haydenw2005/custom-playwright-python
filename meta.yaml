@@ -1,5 +1,5 @@
 package:
-  name: playwright
+  name: custom-playwright
   version: "{{ environ.get('GIT_DESCRIBE_TAG') | replace('v', '') }}"
 
 source:
@@ -36,7 +36,7 @@ test:
     - playwright --help
 
 about:
-  home: https://github.com/microsoft/playwright-python
+  home: https://github.com/microsoft/custom-playwright-python
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
@@ -47,4 +47,4 @@ about:
     delivers automation that is ever-green, capable, reliable
     and fast.
   doc_url: https://playwright.dev/python/docs/intro/
-  dev_url: https://github.com/microsoft/playwright-python
+  dev_url: https://github.com/microsoft/custom-playwright-python
