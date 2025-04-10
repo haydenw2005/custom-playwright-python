@@ -34,7 +34,7 @@ exclude = [
 profile = "black"
 
 [tool.pyright]
-include = ["playwright", "tests", "scripts"]
+include = ["custom_playwright", "tests", "scripts"]
 pythonVersion = "3.8"
 reportMissingImports = false
 reportTypedDictNotRequiredAccess = false
