@@ -76,7 +76,7 @@ class PlaywrightBDistWheelCommand(BDistWheelCommand):
         shutil.rmtree("playwright.egg-info", ignore_errors=True)
         super().run()
         os.makedirs("driver", exist_ok=True)
-        os.makedirs("custom-playwright/driver", exist_ok=True)
+        os.makedirs("custom_playwright/driver", exist_ok=True)
         base_wheel_bundles: List[Dict[str, str]] = [
             {
                 "wheel": "macosx_10_13_x86_64.whl",
@@ -156,9 +156,9 @@ class PlaywrightBDistWheelCommand(BDistWheelCommand):
                     for file in files:
                         from_path = os.path.join(dir_path, file)
                         to_path = os.path.relpath(from_path, driver_root)
-                        zip.write(from_path, f"custom-playwright/driver/{to_path}")
+                        zip.write(from_path, f"custom_playwright/driver/{to_path}")
                 zip.writestr(
-                    "custom-playwright/driver/README.md",
+                    "custom_playwright/driver/README.md",
                     f"{wheel_bundle['wheel']} driver package",
                 )
         os.remove(base_wheel_location)
@@ -195,7 +195,7 @@ class PlaywrightBDistWheelCommand(BDistWheelCommand):
         download_driver(zip_name)
         zip_file = f"driver/playwright-{driver_version}-{zip_name}.zip"
         with zipfile.ZipFile(zip_file, "r") as zip:
-            extractall(zip, "custom-playwright/driver")
+            extractall(zip, "custom_playwright/driver")
 
 
 setup(
