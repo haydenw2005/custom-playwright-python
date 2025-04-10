@@ -24,11 +24,17 @@ from custom_playwright._repo_version import version
 
 def compute_driver_executable() -> Tuple[str, str]:
     #driver_path = Path(inspect.getfile(custom_playwright)).parent / "driver"
-    driver_path = Path(__file__).resolve().parent.parent.parent / "driver"
-    cli_path = str(driver_path / "package" / "cli.js")
-    if sys.platform == "win32":
-        return (str(driver_path / "node.exe"), cli_path)
-    return (os.getenv("PLAYWRIGHT_NODEJS_PATH", str(driver_path / "node")), cli_path)
+    # driver_path = Path(__file__).resolve().parent.parent.parent / "driver"
+    # cli_path = str(driver_path / "package" / "cli.js")
+    # if sys.platform == "win32":
+    #     return (str(driver_path / "node.exe"), cli_path)
+    # return (os.getenv("PLAYWRIGHT_NODEJS_PATH", str(driver_path / "node")), cli_path)
+    cache_dir = Path(os.getenv("CUSTOM_PLAYWRIGHT_CACHE_DIR", Path.home() / ".cache/custom-playwright"))
+    driver = cache_dir / "driver" / "node"
+    if not driver.exists():
+        raise FileNotFoundError("Custom Playwright driver not found. Run `custom-playwright install`.")
+    return driver
+
 
 
 def get_driver_env() -> dict:
