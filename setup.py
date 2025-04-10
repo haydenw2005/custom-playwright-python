@@ -30,7 +30,8 @@ except ImportError:
     InWheel = None
 from wheel.bdist_wheel import bdist_wheel as BDistWheelCommand
 
-driver_version = "1.46.0-hayden"
+driver_version = "1.45.0-anam"
+
 
 
 def extractall(zip: zipfile.ZipFile, path: str) -> None:
@@ -219,7 +220,7 @@ setup(
     include_package_data=True,
     install_requires=[
         "greenlet==3.1.1",
-        "pyee==11.1.0",
+        "pyee==12.1.0",
     ],
     # TODO: Can be removed once we migrate to pypa/build or pypa/installer.
     setup_requires=["setuptools-scm==8.0.4", "wheel==0.42.0"],
