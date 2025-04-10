@@ -15,10 +15,10 @@
 import subprocess
 import sys
 
-from custom_playwright._impl._driver.install import main as install_main
+from custom_playwright._impl import _driver
 
 def main():
-    install_main()
+    _driver.install()
 
 
 if __name__ == "__main__":
