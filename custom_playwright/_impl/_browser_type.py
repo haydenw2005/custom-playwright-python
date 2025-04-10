@@ -17,22 +17,22 @@ import pathlib
 from pathlib import Path
 from typing import TYPE_CHECKING, Dict, Optional, Pattern, Sequence, Union, cast
 
-from playwright._impl._api_structures import (
+from custom_playwright._impl._api_structures import (
     Geolocation,
     HttpCredentials,
     ProxySettings,
     ViewportSize,
 )
-from playwright._impl._browser import Browser, prepare_browser_context_params
-from playwright._impl._browser_context import BrowserContext
-from playwright._impl._connection import (
+from custom_playwright._impl._browser import Browser, prepare_browser_context_params
+from custom_playwright._impl._browser_context import BrowserContext
+from custom_playwright._impl._connection import (
     ChannelOwner,
     Connection,
     from_channel,
     from_nullable_channel,
 )
-from playwright._impl._errors import Error
-from playwright._impl._helper import (
+from custom_playwright._impl._errors import Error
+from custom_playwright._impl._helper import (
     ColorScheme,
     Env,
     ForcedColors,
@@ -42,12 +42,12 @@ from playwright._impl._helper import (
     ServiceWorkersPolicy,
     locals_to_params,
 )
-from playwright._impl._json_pipe import JsonPipeTransport
-from playwright._impl._network import serialize_headers
-from playwright._impl._waiter import throw_on_timeout
+from custom_playwright._impl._json_pipe import JsonPipeTransport
+from custom_playwright._impl._network import serialize_headers
+from custom_playwright._impl._waiter import throw_on_timeout
 
 if TYPE_CHECKING:
-    from playwright._impl._playwright import Playwright
+    from custom_playwright._impl._playwright import Playwright
 
 
 class BrowserType(ChannelOwner):

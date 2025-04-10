@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Tuple
 
 import playwright
-from playwright._repo_version import version
+from custom_playwright._repo_version import version
 
 
 def compute_driver_executable() -> Tuple[str, str]:

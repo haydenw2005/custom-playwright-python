@@ -37,14 +37,14 @@ from pyee import EventEmitter
 from pyee.asyncio import AsyncIOEventEmitter
 
 import playwright
-from playwright._impl._errors import TargetClosedError, rewrite_error
-from playwright._impl._greenlets import EventGreenlet
-from playwright._impl._helper import Error, ParsedMessagePayload, parse_error
-from playwright._impl._transport import Transport
+from custom_playwright._impl._errors import TargetClosedError, rewrite_error
+from custom_playwright._impl._greenlets import EventGreenlet
+from custom_playwright._impl._helper import Error, ParsedMessagePayload, parse_error
+from custom_playwright._impl._transport import Transport
 
 if TYPE_CHECKING:
-    from playwright._impl._local_utils import LocalUtils
-    from playwright._impl._playwright import Playwright
+    from custom_playwright._impl._local_utils import LocalUtils
+    from custom_playwright._impl._playwright import Playwright
 
 
 class Channel(AsyncIOEventEmitter):

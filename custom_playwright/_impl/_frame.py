@@ -29,16 +29,16 @@ from typing import (
 
 from pyee import EventEmitter
 
-from playwright._impl._api_structures import AriaRole, FilePayload, Position
-from playwright._impl._connection import (
+from custom_playwright._impl._api_structures import AriaRole, FilePayload, Position
+from custom_playwright._impl._connection import (
     ChannelOwner,
     from_channel,
     from_nullable_channel,
 )
-from playwright._impl._element_handle import ElementHandle, convert_select_option_values
-from playwright._impl._errors import Error
-from playwright._impl._event_context_manager import EventContextManagerImpl
-from playwright._impl._helper import (
+from custom_playwright._impl._element_handle import ElementHandle, convert_select_option_values
+from custom_playwright._impl._errors import Error
+from custom_playwright._impl._event_context_manager import EventContextManagerImpl
+from custom_playwright._impl._helper import (
     DocumentLoadState,
     FrameNavigatedEvent,
     KeyboardModifier,
@@ -50,14 +50,14 @@ from playwright._impl._helper import (
     locals_to_params,
     monotonic_time,
 )
-from playwright._impl._js_handle import (
+from custom_playwright._impl._js_handle import (
     JSHandle,
     Serializable,
     add_source_url_to_script,
     parse_result,
     serialize_argument,
 )
-from playwright._impl._locator import (
+from custom_playwright._impl._locator import (
     FrameLocator,
     Locator,
     get_by_alt_text_selector,
@@ -69,12 +69,12 @@ from playwright._impl._locator import (
     get_by_title_selector,
     test_id_attribute_name,
 )
-from playwright._impl._network import Response
-from playwright._impl._set_input_files_helpers import convert_input_files
-from playwright._impl._waiter import Waiter
+from custom_playwright._impl._network import Response
+from custom_playwright._impl._set_input_files_helpers import convert_input_files
+from custom_playwright._impl._waiter import Waiter
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._page import Page
+    from custom_playwright._impl._page import Page
 
 
 class Frame(ChannelOwner):

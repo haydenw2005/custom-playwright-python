@@ -18,7 +18,7 @@ import re
 
 import pytest
 
-from playwright.async_api import Browser, Error, Page, expect
+from custom_playwright.async_api import Browser, Error, Page, expect
 from tests.server import Server
 
 

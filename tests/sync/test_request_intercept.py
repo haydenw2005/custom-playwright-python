@@ -16,7 +16,7 @@ from pathlib import Path
 
 from twisted.web import http
 
-from playwright.sync_api import Page, Route
+from custom_playwright.sync_api import Page, Route
 from tests.server import Server
 
 

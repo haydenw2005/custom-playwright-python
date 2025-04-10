@@ -17,13 +17,13 @@ from typing import TYPE_CHECKING, Any, Optional, cast
 
 from greenlet import greenlet
 
-from playwright._impl._connection import ChannelOwner, Connection
-from playwright._impl._errors import Error
-from playwright._impl._greenlets import MainGreenlet
-from playwright._impl._object_factory import create_remote_object
-from playwright._impl._playwright import Playwright
-from playwright._impl._transport import PipeTransport
-from playwright.sync_api._generated import Playwright as SyncPlaywright
+from custom_playwright._impl._connection import ChannelOwner, Connection
+from custom_playwright._impl._errors import Error
+from custom_playwright._impl._greenlets import MainGreenlet
+from custom_playwright._impl._object_factory import create_remote_object
+from custom_playwright._impl._playwright import Playwright
+from custom_playwright._impl._transport import PipeTransport
+from custom_playwright.sync_api._generated import Playwright as SyncPlaywright
 
 if TYPE_CHECKING:
     from asyncio.unix_events import AbstractChildWatcher

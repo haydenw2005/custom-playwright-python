@@ -27,9 +27,9 @@ from typing import (
     cast,
 )
 
-from playwright._impl._api_structures import FilePayload, FloatRect, Position
-from playwright._impl._connection import ChannelOwner, from_nullable_channel
-from playwright._impl._helper import (
+from custom_playwright._impl._api_structures import FilePayload, FloatRect, Position
+from custom_playwright._impl._connection import ChannelOwner, from_nullable_channel
+from custom_playwright._impl._helper import (
     Error,
     KeyboardModifier,
     MouseButton,
@@ -37,17 +37,17 @@ from playwright._impl._helper import (
     locals_to_params,
     make_dirs_for_file,
 )
-from playwright._impl._js_handle import (
+from custom_playwright._impl._js_handle import (
     JSHandle,
     Serializable,
     parse_result,
     serialize_argument,
 )
-from playwright._impl._set_input_files_helpers import convert_input_files
+from custom_playwright._impl._set_input_files_helpers import convert_input_files
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._frame import Frame
-    from playwright._impl._locator import Locator
+    from custom_playwright._impl._frame import Frame
+    from custom_playwright._impl._locator import Locator
 
 
 class ElementHandle(JSHandle):

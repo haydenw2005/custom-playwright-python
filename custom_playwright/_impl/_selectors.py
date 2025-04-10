@@ -16,10 +16,10 @@ import asyncio
 from pathlib import Path
 from typing import Any, Dict, List, Set, Union
 
-from playwright._impl._connection import ChannelOwner
-from playwright._impl._errors import Error
-from playwright._impl._helper import async_readfile
-from playwright._impl._locator import set_test_id_attribute_name, test_id_attribute_name
+from custom_playwright._impl._connection import ChannelOwner
+from custom_playwright._impl._errors import Error
+from custom_playwright._impl._helper import async_readfile
+from custom_playwright._impl._locator import set_test_id_attribute_name, test_id_attribute_name
 
 
 class Selectors:

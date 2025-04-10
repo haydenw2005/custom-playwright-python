@@ -28,7 +28,7 @@ from pixelmatch import pixelmatch
 from pixelmatch.contrib.PIL import from_PIL_to_raw_data
 
 import playwright
-from playwright._impl._path_utils import get_file_dirname
+from custom_playwright._impl._path_utils import get_file_dirname
 
 from .server import Server, WebSocketServerServer, test_server
 

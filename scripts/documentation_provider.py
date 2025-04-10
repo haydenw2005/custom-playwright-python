@@ -19,7 +19,7 @@ from sys import stderr
 from typing import Any, Dict, List, Set, Union, get_args, get_origin, get_type_hints
 from urllib.parse import urljoin
 
-from playwright._impl._helper import to_snake_case
+from custom_playwright._impl._helper import to_snake_case
 
 enum_regex = r"^\"[^\"]+\"(?:\|\"[^\"]+\")+$"
 union_regex = r"^[^\|]+(?:\|[^\|]+)+$"

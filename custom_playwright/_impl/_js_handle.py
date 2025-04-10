@@ -19,12 +19,12 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Union
 from urllib.parse import ParseResult, urlparse, urlunparse
 
-from playwright._impl._connection import Channel, ChannelOwner, from_channel
-from playwright._impl._errors import is_target_closed_error
-from playwright._impl._map import Map
+from custom_playwright._impl._connection import Channel, ChannelOwner, from_channel
+from custom_playwright._impl._errors import is_target_closed_error
+from custom_playwright._impl._map import Map
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._element_handle import ElementHandle
+    from custom_playwright._impl._element_handle import ElementHandle
 
 
 Serializable = Any

@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from playwright._impl._connection import Channel
-from playwright._impl._helper import MouseButton, locals_to_params
+from custom_playwright._impl._connection import Channel
+from custom_playwright._impl._helper import MouseButton, locals_to_params
 
 
 class Keyboard:

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from playwright.async_api import Page, Response
+from custom_playwright.async_api import Page, Response
 from tests.server import Server
 
 

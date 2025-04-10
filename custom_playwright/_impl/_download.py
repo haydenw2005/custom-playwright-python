@@ -16,10 +16,10 @@ import pathlib
 from pathlib import Path
 from typing import TYPE_CHECKING, Optional, Union
 
-from playwright._impl._artifact import Artifact
+from custom_playwright._impl._artifact import Artifact
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._page import Page
+    from custom_playwright._impl._page import Page
 
 
 class Download:

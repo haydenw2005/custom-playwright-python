@@ -1,5 +1,5 @@
 import pytest
-from playwright.async_api import async_playwright
+from custom_playwright.async_api import async_playwright
 import asyncio
 
 @pytest.mark.asyncio

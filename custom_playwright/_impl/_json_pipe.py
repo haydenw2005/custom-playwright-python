@@ -17,9 +17,9 @@ from typing import Dict, cast
 
 from pyee.asyncio import AsyncIOEventEmitter
 
-from playwright._impl._connection import Channel
-from playwright._impl._helper import Error, ParsedMessagePayload
-from playwright._impl._transport import Transport
+from custom_playwright._impl._connection import Channel
+from custom_playwright._impl._helper import Error, ParsedMessagePayload
+from custom_playwright._impl._transport import Transport
 
 
 class JsonPipeTransport(AsyncIOEventEmitter, Transport):

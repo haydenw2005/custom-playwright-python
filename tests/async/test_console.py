@@ -16,7 +16,7 @@ from typing import List
 
 import pytest
 
-from playwright.async_api import ConsoleMessage, Page
+from custom_playwright.async_api import ConsoleMessage, Page
 from tests.server import Server
 
 

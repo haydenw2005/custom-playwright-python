@@ -14,25 +14,25 @@
 
 from typing import Dict, cast
 
-from playwright._impl._artifact import Artifact
-from playwright._impl._browser import Browser
-from playwright._impl._browser_context import BrowserContext
-from playwright._impl._browser_type import BrowserType
-from playwright._impl._cdp_session import CDPSession
-from playwright._impl._connection import ChannelOwner
-from playwright._impl._dialog import Dialog
-from playwright._impl._element_handle import ElementHandle
-from playwright._impl._fetch import APIRequestContext
-from playwright._impl._frame import Frame
-from playwright._impl._js_handle import JSHandle
-from playwright._impl._local_utils import LocalUtils
-from playwright._impl._network import Request, Response, Route, WebSocket
-from playwright._impl._page import BindingCall, Page, Worker
-from playwright._impl._playwright import Playwright
-from playwright._impl._selectors import SelectorsOwner
-from playwright._impl._stream import Stream
-from playwright._impl._tracing import Tracing
-from playwright._impl._writable_stream import WritableStream
+from custom_playwright._impl._artifact import Artifact
+from custom_playwright._impl._browser import Browser
+from custom_playwright._impl._browser_context import BrowserContext
+from custom_playwright._impl._browser_type import BrowserType
+from custom_playwright._impl._cdp_session import CDPSession
+from custom_playwright._impl._connection import ChannelOwner
+from custom_playwright._impl._dialog import Dialog
+from custom_playwright._impl._element_handle import ElementHandle
+from custom_playwright._impl._fetch import APIRequestContext
+from custom_playwright._impl._frame import Frame
+from custom_playwright._impl._js_handle import JSHandle
+from custom_playwright._impl._local_utils import LocalUtils
+from custom_playwright._impl._network import Request, Response, Route, WebSocket
+from custom_playwright._impl._page import BindingCall, Page, Worker
+from custom_playwright._impl._playwright import Playwright
+from custom_playwright._impl._selectors import SelectorsOwner
+from custom_playwright._impl._stream import Stream
+from custom_playwright._impl._tracing import Tracing
+from custom_playwright._impl._writable_stream import WritableStream
 
 
 class DummyObject(ChannelOwner):

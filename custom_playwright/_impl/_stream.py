@@ -16,7 +16,7 @@ import base64
 from pathlib import Path
 from typing import Dict, Union
 
-from playwright._impl._connection import ChannelOwner
+from custom_playwright._impl._connection import ChannelOwner
 
 
 class Stream(ChannelOwner):

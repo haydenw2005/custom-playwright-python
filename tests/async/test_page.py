@@ -20,7 +20,7 @@ from typing import Dict, List, Optional
 
 import pytest
 
-from playwright.async_api import (
+from custom_playwright.async_api import (
     BrowserContext,
     Error,
     JSHandle,

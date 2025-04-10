@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Union, cast
 
 import playwright._impl._network as network
-from playwright._impl._api_structures import (
+from custom_playwright._impl._api_structures import (
     FilePayload,
     FormField,
     Headers,
@@ -29,9 +29,9 @@ from playwright._impl._api_structures import (
     ServerFilePayload,
     StorageState,
 )
-from playwright._impl._connection import ChannelOwner, from_channel
-from playwright._impl._errors import is_target_closed_error
-from playwright._impl._helper import (
+from custom_playwright._impl._connection import ChannelOwner, from_channel
+from custom_playwright._impl._errors import is_target_closed_error
+from custom_playwright._impl._helper import (
     Error,
     NameValue,
     async_readfile,
@@ -41,11 +41,11 @@ from playwright._impl._helper import (
     object_to_array,
     to_impl,
 )
-from playwright._impl._network import serialize_headers
-from playwright._impl._tracing import Tracing
+from custom_playwright._impl._network import serialize_headers
+from custom_playwright._impl._tracing import Tracing
 
 if typing.TYPE_CHECKING:
-    from playwright._impl._playwright import Playwright
+    from custom_playwright._impl._playwright import Playwright
 
 
 FormType = Dict[str, Union[bool, float, str]]

@@ -15,11 +15,11 @@
 import pathlib
 from typing import TYPE_CHECKING, Union
 
-from playwright._impl._artifact import Artifact
-from playwright._impl._helper import Error
+from custom_playwright._impl._artifact import Artifact
+from custom_playwright._impl._helper import Error
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._page import Page
+    from custom_playwright._impl._page import Page
 
 
 class Video:

@@ -17,19 +17,19 @@ from pathlib import Path
 from types import SimpleNamespace
 from typing import TYPE_CHECKING, Dict, List, Optional, Pattern, Sequence, Union, cast
 
-from playwright._impl._api_structures import (
+from custom_playwright._impl._api_structures import (
     Geolocation,
     HttpCredentials,
     ProxySettings,
     StorageState,
     ViewportSize,
 )
-from playwright._impl._artifact import Artifact
-from playwright._impl._browser_context import BrowserContext
-from playwright._impl._cdp_session import CDPSession
-from playwright._impl._connection import ChannelOwner, from_channel
-from playwright._impl._errors import is_target_closed_error
-from playwright._impl._helper import (
+from custom_playwright._impl._artifact import Artifact
+from custom_playwright._impl._browser_context import BrowserContext
+from custom_playwright._impl._cdp_session import CDPSession
+from custom_playwright._impl._connection import ChannelOwner, from_channel
+from custom_playwright._impl._errors import is_target_closed_error
+from custom_playwright._impl._helper import (
     ColorScheme,
     ForcedColors,
     HarContentPolicy,
@@ -41,11 +41,11 @@ from playwright._impl._helper import (
     make_dirs_for_file,
     prepare_record_har_options,
 )
-from playwright._impl._network import serialize_headers
-from playwright._impl._page import Page
+from custom_playwright._impl._network import serialize_headers
+from custom_playwright._impl._page import Page
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._browser_type import BrowserType
+    from custom_playwright._impl._browser_type import BrowserType
 
 
 class Browser(ChannelOwner):

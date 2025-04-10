@@ -128,7 +128,7 @@ def generate(t: Any) -> None:
 def main() -> None:
     print(header)
     print(
-        "from playwright._impl._async_base import AsyncEventContextManager, AsyncBase, AsyncContextManager, mapping"
+        "from custom_playwright._impl._async_base import AsyncEventContextManager, AsyncBase, AsyncContextManager, mapping"
     )
 
     for t in generated_types:

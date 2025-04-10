@@ -20,8 +20,8 @@ from typing import Callable, List, Optional
 
 import pytest
 
-from playwright._impl._glob import glob_to_regex
-from playwright.async_api import (
+from custom_playwright._impl._glob import glob_to_regex
+from custom_playwright.async_api import (
     Browser,
     BrowserContext,
     Error,

@@ -18,7 +18,7 @@ from typing import Awaitable, Callable, List
 
 import pytest
 
-from playwright.async_api import (
+from custom_playwright.async_api import (
     Browser,
     BrowserContext,
     Error,

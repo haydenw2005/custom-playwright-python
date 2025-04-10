@@ -16,7 +16,7 @@ import re
 
 import pytest
 
-from playwright.async_api import Error, Page
+from custom_playwright.async_api import Error, Page
 from tests.server import Server
 
 

@@ -14,11 +14,11 @@
 
 from typing import TYPE_CHECKING, Dict, Optional
 
-from playwright._impl._connection import ChannelOwner, from_nullable_channel
-from playwright._impl._helper import locals_to_params
+from custom_playwright._impl._connection import ChannelOwner, from_nullable_channel
+from custom_playwright._impl._helper import locals_to_params
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._page import Page
+    from custom_playwright._impl._page import Page
 
 
 class Dialog(ChannelOwner):

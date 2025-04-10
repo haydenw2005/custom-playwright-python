@@ -16,7 +16,7 @@ from typing import Optional
 
 import pytest
 
-from playwright.sync_api import Dialog, Page
+from custom_playwright.sync_api import Dialog, Page
 
 from ..server import Server, TestServerRequest
 

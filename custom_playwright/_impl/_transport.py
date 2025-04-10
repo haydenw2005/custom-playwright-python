@@ -21,8 +21,8 @@ import sys
 from abc import ABC, abstractmethod
 from typing import Callable, Dict, Optional, Union
 
-from playwright._impl._driver import compute_driver_executable, get_driver_env
-from playwright._impl._helper import ParsedMessagePayload
+from custom_playwright._impl._driver import compute_driver_executable, get_driver_env
+from custom_playwright._impl._helper import ParsedMessagePayload
 
 
 # Sourced from: https://github.com/pytest-dev/pytest/blob/da01ee0a4bb0af780167ecd228ab3ad249511302/src/_pytest/faulthandler.py#L69-L77

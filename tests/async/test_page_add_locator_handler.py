@@ -16,7 +16,7 @@ import asyncio
 
 import pytest
 
-from playwright.async_api import Error, Page, expect
+from custom_playwright.async_api import Error, Page, expect
 from tests.server import Server
 from tests.utils import TARGET_CLOSED_ERROR_MESSAGE
 

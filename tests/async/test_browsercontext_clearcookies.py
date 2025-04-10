@@ -15,7 +15,7 @@
 import re
 from urllib.parse import urlparse
 
-from playwright.async_api import Browser, BrowserContext, Page
+from custom_playwright.async_api import Browser, BrowserContext, Page
 from tests.server import Server
 
 

@@ -15,10 +15,10 @@
 import asyncio
 from typing import Any
 
-from playwright._impl._connection import Connection
-from playwright._impl._object_factory import create_remote_object
-from playwright._impl._transport import PipeTransport
-from playwright.async_api._generated import Playwright as AsyncPlaywright
+from custom_playwright._impl._connection import Connection
+from custom_playwright._impl._object_factory import create_remote_object
+from custom_playwright._impl._transport import PipeTransport
+from custom_playwright.async_api._generated import Playwright as AsyncPlaywright
 
 
 class PlaywrightContextManager:

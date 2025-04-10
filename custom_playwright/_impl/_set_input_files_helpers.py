@@ -17,14 +17,14 @@ import os
 from pathlib import Path
 from typing import TYPE_CHECKING, Dict, List, Optional, Sequence, TypedDict, Union, cast
 
-from playwright._impl._connection import Channel, from_channel
-from playwright._impl._helper import Error
-from playwright._impl._writable_stream import WritableStream
+from custom_playwright._impl._connection import Channel, from_channel
+from custom_playwright._impl._helper import Error
+from custom_playwright._impl._writable_stream import WritableStream
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._browser_context import BrowserContext
+    from custom_playwright._impl._browser_context import BrowserContext
 
-from playwright._impl._api_structures import FilePayload
+from custom_playwright._impl._api_structures import FilePayload
 
 SIZE_LIMIT_IN_BYTES = 50 * 1024 * 1024
 

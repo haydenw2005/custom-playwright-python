@@ -18,7 +18,7 @@ from pathlib import Path
 
 import pytest
 
-from playwright.async_api import Browser, Page
+from custom_playwright.async_api import Browser, Page
 from tests.server import Server
 
 

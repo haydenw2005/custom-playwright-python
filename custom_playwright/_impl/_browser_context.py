@@ -31,27 +31,27 @@ from typing import (
     cast,
 )
 
-from playwright._impl._api_structures import (
+from custom_playwright._impl._api_structures import (
     Cookie,
     Geolocation,
     SetCookieParam,
     StorageState,
 )
-from playwright._impl._artifact import Artifact
-from playwright._impl._cdp_session import CDPSession
-from playwright._impl._connection import (
+from custom_playwright._impl._artifact import Artifact
+from custom_playwright._impl._cdp_session import CDPSession
+from custom_playwright._impl._connection import (
     ChannelOwner,
     from_channel,
     from_nullable_channel,
 )
-from playwright._impl._console_message import ConsoleMessage
-from playwright._impl._dialog import Dialog
-from playwright._impl._errors import Error, TargetClosedError
-from playwright._impl._event_context_manager import EventContextManagerImpl
-from playwright._impl._fetch import APIRequestContext
-from playwright._impl._frame import Frame
-from playwright._impl._har_router import HarRouter
-from playwright._impl._helper import (
+from custom_playwright._impl._console_message import ConsoleMessage
+from custom_playwright._impl._dialog import Dialog
+from custom_playwright._impl._errors import Error, TargetClosedError
+from custom_playwright._impl._event_context_manager import EventContextManagerImpl
+from custom_playwright._impl._fetch import APIRequestContext
+from custom_playwright._impl._frame import Frame
+from custom_playwright._impl._har_router import HarRouter
+from custom_playwright._impl._helper import (
     HarContentPolicy,
     HarMode,
     HarRecordingMetadata,
@@ -68,15 +68,15 @@ from playwright._impl._helper import (
     prepare_record_har_options,
     to_impl,
 )
-from playwright._impl._network import Request, Response, Route, serialize_headers
-from playwright._impl._page import BindingCall, Page, Worker
-from playwright._impl._str_utils import escape_regex_flags
-from playwright._impl._tracing import Tracing
-from playwright._impl._waiter import Waiter
-from playwright._impl._web_error import WebError
+from custom_playwright._impl._network import Request, Response, Route, serialize_headers
+from custom_playwright._impl._page import BindingCall, Page, Worker
+from custom_playwright._impl._str_utils import escape_regex_flags
+from custom_playwright._impl._tracing import Tracing
+from custom_playwright._impl._waiter import Waiter
+from custom_playwright._impl._web_error import WebError
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._browser import Browser
+    from custom_playwright._impl._browser import Browser
 
 
 class BrowserContext(ChannelOwner):

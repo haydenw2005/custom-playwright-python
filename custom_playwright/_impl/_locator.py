@@ -30,7 +30,7 @@ from typing import (
     Union,
 )
 
-from playwright._impl._api_structures import (
+from custom_playwright._impl._api_structures import (
     AriaRole,
     FilePayload,
     FloatRect,
@@ -38,8 +38,8 @@ from playwright._impl._api_structures import (
     FrameExpectResult,
     Position,
 )
-from playwright._impl._element_handle import ElementHandle
-from playwright._impl._helper import (
+from custom_playwright._impl._element_handle import ElementHandle
+from custom_playwright._impl._helper import (
     Error,
     KeyboardModifier,
     MouseButton,
@@ -47,16 +47,16 @@ from playwright._impl._helper import (
     monotonic_time,
     to_impl,
 )
-from playwright._impl._js_handle import Serializable, parse_value, serialize_argument
-from playwright._impl._str_utils import (
+from custom_playwright._impl._js_handle import Serializable, parse_value, serialize_argument
+from custom_playwright._impl._str_utils import (
     escape_for_attribute_selector,
     escape_for_text_selector,
 )
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._frame import Frame
-    from playwright._impl._js_handle import JSHandle
-    from playwright._impl._page import Page
+    from custom_playwright._impl._frame import Frame
+    from custom_playwright._impl._js_handle import JSHandle
+    from custom_playwright._impl._page import Page
 
 T = TypeVar("T")
 

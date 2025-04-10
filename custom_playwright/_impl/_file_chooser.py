@@ -15,11 +15,11 @@
 from pathlib import Path
 from typing import TYPE_CHECKING, Sequence, Union
 
-from playwright._impl._api_structures import FilePayload
+from custom_playwright._impl._api_structures import FilePayload
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._element_handle import ElementHandle
-    from playwright._impl._page import Page
+    from custom_playwright._impl._element_handle import ElementHandle
+    from custom_playwright._impl._page import Page
 
 
 class FileChooser:

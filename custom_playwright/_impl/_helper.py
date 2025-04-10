@@ -36,15 +36,15 @@ from typing import (
 )
 from urllib.parse import urljoin
 
-from playwright._impl._api_structures import NameValue
-from playwright._impl._errors import Error, TargetClosedError, TimeoutError
-from playwright._impl._glob import glob_to_regex
-from playwright._impl._greenlets import RouteGreenlet
-from playwright._impl._str_utils import escape_regex_flags
+from custom_playwright._impl._api_structures import NameValue
+from custom_playwright._impl._errors import Error, TargetClosedError, TimeoutError
+from custom_playwright._impl._glob import glob_to_regex
+from custom_playwright._impl._greenlets import RouteGreenlet
+from custom_playwright._impl._str_utils import escape_regex_flags
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._api_structures import HeadersArray
-    from playwright._impl._network import Request, Response, Route
+    from custom_playwright._impl._api_structures import HeadersArray
+    from custom_playwright._impl._network import Request, Response, Route
 
 URLMatch = Union[str, Pattern[str], Callable[[str], bool]]
 URLMatchRequest = Union[str, Pattern[str], Callable[["Request"], bool]]

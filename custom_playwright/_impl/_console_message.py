@@ -15,12 +15,12 @@
 from asyncio import AbstractEventLoop
 from typing import TYPE_CHECKING, Any, Dict, List, Optional
 
-from playwright._impl._api_structures import SourceLocation
-from playwright._impl._connection import from_channel, from_nullable_channel
-from playwright._impl._js_handle import JSHandle
+from custom_playwright._impl._api_structures import SourceLocation
+from custom_playwright._impl._connection import from_channel, from_nullable_channel
+from custom_playwright._impl._js_handle import JSHandle
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._page import Page
+    from custom_playwright._impl._page import Page
 
 
 class ConsoleMessage:

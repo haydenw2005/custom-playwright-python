@@ -14,9 +14,9 @@
 
 from typing import Dict, Optional
 
-from playwright._impl._connection import Channel
-from playwright._impl._element_handle import ElementHandle
-from playwright._impl._helper import locals_to_params
+from custom_playwright._impl._connection import Channel
+from custom_playwright._impl._element_handle import ElementHandle
+from custom_playwright._impl._helper import locals_to_params
 
 
 def _ax_node_from_protocol(axNode: Dict) -> Dict:

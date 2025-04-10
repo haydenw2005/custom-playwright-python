@@ -15,7 +15,7 @@ from typing import Generator
 
 import pytest
 
-from playwright.sync_api import Page, expect
+from custom_playwright.sync_api import Page, expect
 
 from .utils import TODO_ITEMS, assert_number_of_todos_in_local_storage
 

@@ -14,7 +14,7 @@
 
 import pytest
 
-from playwright.sync_api import Error, Page, expect
+from custom_playwright.sync_api import Error, Page, expect
 from tests.server import Server
 from tests.utils import TARGET_CLOSED_ERROR_MESSAGE
 

@@ -23,13 +23,13 @@ from typing import Any, Optional, Union, overload
 import playwright._impl._api_structures
 import playwright._impl._errors
 import playwright.async_api._generated
-from playwright._impl._assertions import (
+from custom_playwright._impl._assertions import (
     APIResponseAssertions as APIResponseAssertionsImpl,
 )
-from playwright._impl._assertions import LocatorAssertions as LocatorAssertionsImpl
-from playwright._impl._assertions import PageAssertions as PageAssertionsImpl
-from playwright.async_api._context_manager import PlaywrightContextManager
-from playwright.async_api._generated import (
+from custom_playwright._impl._assertions import LocatorAssertions as LocatorAssertionsImpl
+from custom_playwright._impl._assertions import PageAssertions as PageAssertionsImpl
+from custom_playwright.async_api._context_manager import PlaywrightContextManager
+from custom_playwright.async_api._generated import (
     Accessibility,
     APIRequest,
     APIRequestContext,

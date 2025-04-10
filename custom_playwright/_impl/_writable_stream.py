@@ -17,7 +17,7 @@ import os
 from pathlib import Path
 from typing import Dict, Union
 
-from playwright._impl._connection import ChannelOwner
+from custom_playwright._impl._connection import ChannelOwner
 
 # COPY_BUFSIZE is taken from shutil.py in the standard library
 _WINDOWS = os.name == "nt"

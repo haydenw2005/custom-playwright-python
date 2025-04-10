@@ -33,8 +33,8 @@ from typing import (
     cast,
 )
 
-from playwright._impl._accessibility import Accessibility
-from playwright._impl._api_structures import (
+from custom_playwright._impl._accessibility import Accessibility
+from custom_playwright._impl._api_structures import (
     AriaRole,
     FilePayload,
     FloatRect,
@@ -42,22 +42,22 @@ from playwright._impl._api_structures import (
     Position,
     ViewportSize,
 )
-from playwright._impl._artifact import Artifact
-from playwright._impl._connection import (
+from custom_playwright._impl._artifact import Artifact
+from custom_playwright._impl._connection import (
     ChannelOwner,
     from_channel,
     from_nullable_channel,
 )
-from playwright._impl._console_message import ConsoleMessage
-from playwright._impl._download import Download
-from playwright._impl._element_handle import ElementHandle
-from playwright._impl._errors import Error, TargetClosedError, is_target_closed_error
-from playwright._impl._event_context_manager import EventContextManagerImpl
-from playwright._impl._file_chooser import FileChooser
-from playwright._impl._frame import Frame
-from playwright._impl._greenlets import LocatorHandlerGreenlet
-from playwright._impl._har_router import HarRouter
-from playwright._impl._helper import (
+from custom_playwright._impl._console_message import ConsoleMessage
+from custom_playwright._impl._download import Download
+from custom_playwright._impl._element_handle import ElementHandle
+from custom_playwright._impl._errors import Error, TargetClosedError, is_target_closed_error
+from custom_playwright._impl._event_context_manager import EventContextManagerImpl
+from custom_playwright._impl._file_chooser import FileChooser
+from custom_playwright._impl._frame import Frame
+from custom_playwright._impl._greenlets import LocatorHandlerGreenlet
+from custom_playwright._impl._har_router import HarRouter
+from custom_playwright._impl._helper import (
     ColorScheme,
     DocumentLoadState,
     ForcedColors,
@@ -79,23 +79,23 @@ from playwright._impl._helper import (
     make_dirs_for_file,
     serialize_error,
 )
-from playwright._impl._input import Keyboard, Mouse, Touchscreen
-from playwright._impl._js_handle import (
+from custom_playwright._impl._input import Keyboard, Mouse, Touchscreen
+from custom_playwright._impl._js_handle import (
     JSHandle,
     Serializable,
     add_source_url_to_script,
     parse_result,
     serialize_argument,
 )
-from playwright._impl._network import Request, Response, Route, serialize_headers
-from playwright._impl._video import Video
-from playwright._impl._waiter import Waiter
+from custom_playwright._impl._network import Request, Response, Route, serialize_headers
+from custom_playwright._impl._video import Video
+from custom_playwright._impl._waiter import Waiter
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._browser_context import BrowserContext
-    from playwright._impl._fetch import APIRequestContext
-    from playwright._impl._locator import FrameLocator, Locator
-    from playwright._impl._network import WebSocket
+    from custom_playwright._impl._browser_context import BrowserContext
+    from custom_playwright._impl._fetch import APIRequestContext
+    from custom_playwright._impl._locator import FrameLocator, Locator
+    from custom_playwright._impl._network import WebSocket
 
 
 class Page(ChannelOwner):

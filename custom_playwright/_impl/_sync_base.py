@@ -32,8 +32,8 @@ from typing import (
 
 import greenlet
 
-from playwright._impl._helper import Error
-from playwright._impl._impl_to_api_mapping import ImplToApiMapping, ImplWrapper
+from custom_playwright._impl._helper import Error
+from custom_playwright._impl._impl_to_api_mapping import ImplToApiMapping, ImplWrapper
 
 mapping = ImplToApiMapping()
 

@@ -20,8 +20,8 @@ from typing import Any, Dict
 
 import pytest
 
-from playwright.async_api import async_playwright
-from playwright.sync_api import sync_playwright
+from custom_playwright.async_api import async_playwright
+from custom_playwright.sync_api import sync_playwright
 
 
 def _test_signals_async(

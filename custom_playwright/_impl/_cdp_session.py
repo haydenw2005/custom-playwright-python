@@ -14,8 +14,8 @@
 
 from typing import Any, Dict
 
-from playwright._impl._connection import ChannelOwner
-from playwright._impl._helper import locals_to_params
+from custom_playwright._impl._connection import ChannelOwner
+from custom_playwright._impl._helper import locals_to_params
 
 
 class CDPSession(ChannelOwner):

@@ -19,7 +19,7 @@ from typing import Any, Callable, Dict, Generator, List
 import pytest
 from greenlet import greenlet
 
-from playwright.sync_api import (
+from custom_playwright.sync_api import (
     Browser,
     BrowserContext,
     BrowserType,

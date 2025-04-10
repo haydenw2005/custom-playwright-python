@@ -15,9 +15,9 @@
 import base64
 from typing import Dict, List, Optional, cast
 
-from playwright._impl._api_structures import HeadersArray
-from playwright._impl._connection import ChannelOwner, StackFrame
-from playwright._impl._helper import HarLookupResult, locals_to_params
+from custom_playwright._impl._api_structures import HeadersArray
+from custom_playwright._impl._connection import ChannelOwner, StackFrame
+from custom_playwright._impl._helper import HarLookupResult, locals_to_params
 
 
 class LocalUtils(ChannelOwner):

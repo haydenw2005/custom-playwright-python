@@ -20,8 +20,8 @@ from typing import Any, Callable, List, Tuple, Union
 
 from pyee import EventEmitter
 
-from playwright._impl._connection import ChannelOwner
-from playwright._impl._errors import Error, TimeoutError
+from custom_playwright._impl._connection import ChannelOwner
+from custom_playwright._impl._errors import Error, TimeoutError
 
 
 class Waiter:

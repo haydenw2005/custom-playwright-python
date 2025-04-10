@@ -17,8 +17,8 @@ import pathlib
 import typing
 from typing import Literal
 
-from playwright._impl._accessibility import Accessibility as AccessibilityImpl
-from playwright._impl._api_structures import (
+from custom_playwright._impl._accessibility import Accessibility as AccessibilityImpl
+from custom_playwright._impl._api_structures import (
     Cookie,
     FilePayload,
     FloatRect,
@@ -37,48 +37,48 @@ from playwright._impl._api_structures import (
     StorageState,
     ViewportSize,
 )
-from playwright._impl._assertions import (
+from custom_playwright._impl._assertions import (
     APIResponseAssertions as APIResponseAssertionsImpl,
 )
-from playwright._impl._assertions import LocatorAssertions as LocatorAssertionsImpl
-from playwright._impl._assertions import PageAssertions as PageAssertionsImpl
-from playwright._impl._async_base import (
+from custom_playwright._impl._assertions import LocatorAssertions as LocatorAssertionsImpl
+from custom_playwright._impl._assertions import PageAssertions as PageAssertionsImpl
+from custom_playwright._impl._async_base import (
     AsyncBase,
     AsyncContextManager,
     AsyncEventContextManager,
     mapping,
 )
-from playwright._impl._browser import Browser as BrowserImpl
-from playwright._impl._browser_context import BrowserContext as BrowserContextImpl
-from playwright._impl._browser_type import BrowserType as BrowserTypeImpl
-from playwright._impl._cdp_session import CDPSession as CDPSessionImpl
-from playwright._impl._console_message import ConsoleMessage as ConsoleMessageImpl
-from playwright._impl._dialog import Dialog as DialogImpl
-from playwright._impl._download import Download as DownloadImpl
-from playwright._impl._element_handle import ElementHandle as ElementHandleImpl
-from playwright._impl._errors import Error
-from playwright._impl._fetch import APIRequest as APIRequestImpl
-from playwright._impl._fetch import APIRequestContext as APIRequestContextImpl
-from playwright._impl._fetch import APIResponse as APIResponseImpl
-from playwright._impl._file_chooser import FileChooser as FileChooserImpl
-from playwright._impl._frame import Frame as FrameImpl
-from playwright._impl._input import Keyboard as KeyboardImpl
-from playwright._impl._input import Mouse as MouseImpl
-from playwright._impl._input import Touchscreen as TouchscreenImpl
-from playwright._impl._js_handle import JSHandle as JSHandleImpl
-from playwright._impl._locator import FrameLocator as FrameLocatorImpl
-from playwright._impl._locator import Locator as LocatorImpl
-from playwright._impl._network import Request as RequestImpl
-from playwright._impl._network import Response as ResponseImpl
-from playwright._impl._network import Route as RouteImpl
-from playwright._impl._network import WebSocket as WebSocketImpl
-from playwright._impl._page import Page as PageImpl
-from playwright._impl._page import Worker as WorkerImpl
-from playwright._impl._playwright import Playwright as PlaywrightImpl
-from playwright._impl._selectors import Selectors as SelectorsImpl
-from playwright._impl._tracing import Tracing as TracingImpl
-from playwright._impl._video import Video as VideoImpl
-from playwright._impl._web_error import WebError as WebErrorImpl
+from custom_playwright._impl._browser import Browser as BrowserImpl
+from custom_playwright._impl._browser_context import BrowserContext as BrowserContextImpl
+from custom_playwright._impl._browser_type import BrowserType as BrowserTypeImpl
+from custom_playwright._impl._cdp_session import CDPSession as CDPSessionImpl
+from custom_playwright._impl._console_message import ConsoleMessage as ConsoleMessageImpl
+from custom_playwright._impl._dialog import Dialog as DialogImpl
+from custom_playwright._impl._download import Download as DownloadImpl
+from custom_playwright._impl._element_handle import ElementHandle as ElementHandleImpl
+from custom_playwright._impl._errors import Error
+from custom_playwright._impl._fetch import APIRequest as APIRequestImpl
+from custom_playwright._impl._fetch import APIRequestContext as APIRequestContextImpl
+from custom_playwright._impl._fetch import APIResponse as APIResponseImpl
+from custom_playwright._impl._file_chooser import FileChooser as FileChooserImpl
+from custom_playwright._impl._frame import Frame as FrameImpl
+from custom_playwright._impl._input import Keyboard as KeyboardImpl
+from custom_playwright._impl._input import Mouse as MouseImpl
+from custom_playwright._impl._input import Touchscreen as TouchscreenImpl
+from custom_playwright._impl._js_handle import JSHandle as JSHandleImpl
+from custom_playwright._impl._locator import FrameLocator as FrameLocatorImpl
+from custom_playwright._impl._locator import Locator as LocatorImpl
+from custom_playwright._impl._network import Request as RequestImpl
+from custom_playwright._impl._network import Response as ResponseImpl
+from custom_playwright._impl._network import Route as RouteImpl
+from custom_playwright._impl._network import WebSocket as WebSocketImpl
+from custom_playwright._impl._page import Page as PageImpl
+from custom_playwright._impl._page import Worker as WorkerImpl
+from custom_playwright._impl._playwright import Playwright as PlaywrightImpl
+from custom_playwright._impl._selectors import Selectors as SelectorsImpl
+from custom_playwright._impl._tracing import Tracing as TracingImpl
+from custom_playwright._impl._video import Video as VideoImpl
+from custom_playwright._impl._web_error import WebError as WebErrorImpl
 
 
 class Request(AsyncBase):
@@ -3564,7 +3564,7 @@ class Frame(AsyncBase):
 
         ```py
         import asyncio
-        from playwright.async_api import async_playwright, Playwright
+        from custom_playwright.async_api import async_playwright, Playwright
 
         async def run(playwright: Playwright):
             chromium = playwright.chromium
@@ -5700,7 +5700,7 @@ class Frame(AsyncBase):
 
         ```py
         import asyncio
-        from playwright.async_api import async_playwright, Playwright
+        from custom_playwright.async_api import async_playwright, Playwright
 
         async def run(playwright: Playwright):
             webkit = playwright.webkit
@@ -6563,7 +6563,7 @@ class Selectors(AsyncBase):
 
         ```py
         import asyncio
-        from playwright.async_api import async_playwright, Playwright
+        from custom_playwright.async_api import async_playwright, Playwright
 
         async def run(playwright: Playwright):
             tag_selector = \"\"\"
@@ -7766,7 +7766,7 @@ class Page(AsyncContextManager):
 
         ```py
         import asyncio
-        from playwright.async_api import async_playwright, Playwright
+        from custom_playwright.async_api import async_playwright, Playwright
 
         async def run(playwright: Playwright):
             chromium = playwright.chromium
@@ -8377,7 +8377,7 @@ class Page(AsyncContextManager):
         ```py
         import asyncio
         import hashlib
-        from playwright.async_api import async_playwright, Playwright
+        from custom_playwright.async_api import async_playwright, Playwright
 
         def sha256(text):
             m = hashlib.sha256()
@@ -8446,7 +8446,7 @@ class Page(AsyncContextManager):
 
         ```py
         import asyncio
-        from playwright.async_api import async_playwright, Playwright
+        from custom_playwright.async_api import async_playwright, Playwright
 
         async def run(playwright: Playwright):
             webkit = playwright.webkit
@@ -11000,7 +11000,7 @@ class Page(AsyncContextManager):
 
         ```py
         import asyncio
-        from playwright.async_api import async_playwright, Playwright
+        from custom_playwright.async_api import async_playwright, Playwright
 
         async def run(playwright: Playwright):
             webkit = playwright.webkit
@@ -12563,7 +12563,7 @@ class BrowserContext(AsyncContextManager):
 
         ```py
         import asyncio
-        from playwright.async_api import async_playwright, Playwright
+        from custom_playwright.async_api import async_playwright, Playwright
 
         async def run(playwright: Playwright):
             webkit = playwright.webkit
@@ -12638,7 +12638,7 @@ class BrowserContext(AsyncContextManager):
         ```py
         import asyncio
         import hashlib
-        from playwright.async_api import async_playwright, Playwright
+        from custom_playwright.async_api import async_playwright, Playwright
 
         def sha256(text: str) -> str:
             m = hashlib.sha256()
@@ -14354,7 +14354,7 @@ class Playwright(AsyncBase):
 
         ```py
         import asyncio
-        from playwright.async_api import async_playwright, Playwright
+        from custom_playwright.async_api import async_playwright, Playwright
 
         async def run(playwright: Playwright):
             webkit = playwright.webkit
@@ -14449,7 +14449,7 @@ class Playwright(AsyncBase):
         in REPL applications.
 
         ```py
-        from playwright.sync_api import sync_playwright
+        from custom_playwright.sync_api import sync_playwright
 
         playwright = sync_playwright().start()
 
@@ -18061,7 +18061,7 @@ class PageAssertions(AsyncBase):
 
         ```py
         import re
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         # ...
         await expect(page).to_have_title(re.compile(r\".*checkout\"))
@@ -18121,7 +18121,7 @@ class PageAssertions(AsyncBase):
 
         ```py
         import re
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         # ...
         await expect(page).to_have_url(re.compile(\".*checkout\"))
@@ -18200,7 +18200,7 @@ class LocatorAssertions(AsyncBase):
 
         ```py
         import re
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator('.title')
         await expect(locator).to_contain_text(\"substring\")
@@ -18226,7 +18226,7 @@ class LocatorAssertions(AsyncBase):
         Let's see how we can use the assertion:
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         # ✓ Contains the right items in the right order
         await expect(page.locator(\"ul > li\")).to_contain_text([\"Text 1\", \"Text 3\", \"Text 4\"])
@@ -18320,7 +18320,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\"input\")
         await expect(locator).to_have_attribute(\"type\", \"text\")
@@ -18402,7 +18402,7 @@ class LocatorAssertions(AsyncBase):
         ```
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\"#component\")
         await expect(locator).to_have_class(re.compile(r\"selected\"))
@@ -18412,7 +18412,7 @@ class LocatorAssertions(AsyncBase):
         Note that if array is passed as an expected value, entire lists of elements can be asserted:
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\"list > .component\")
         await expect(locator).to_have_class([\"component\", \"component selected\", \"component\"])
@@ -18474,7 +18474,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\"list > .component\")
         await expect(locator).to_have_count(3)
@@ -18527,7 +18527,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.get_by_role(\"button\")
         await expect(locator).to_have_css(\"display\", \"flex\")
@@ -18589,7 +18589,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.get_by_role(\"textbox\")
         await expect(locator).to_have_id(\"lastname\")
@@ -18642,7 +18642,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\".component\")
         await expect(locator).to_have_js_property(\"loaded\", True)
@@ -18704,7 +18704,7 @@ class LocatorAssertions(AsyncBase):
 
         ```py
         import re
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\"input[type=number]\")
         await expect(locator).to_have_value(re.compile(r\"[0-9]\"))
@@ -18775,7 +18775,7 @@ class LocatorAssertions(AsyncBase):
 
         ```py
         import re
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\"id=favorite-colors\")
         await locator.select_option([\"R\", \"G\"])
@@ -18854,7 +18854,7 @@ class LocatorAssertions(AsyncBase):
 
         ```py
         import re
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\".title\")
         await expect(locator).to_have_text(re.compile(r\"Welcome, Test User\"))
@@ -18879,7 +18879,7 @@ class LocatorAssertions(AsyncBase):
         Let's see how we can use the assertion:
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         # ✓ Has the right items in the right order
         await expect(page.locator(\"ul > li\")).to_have_text([\"Text 1\", \"Text 2\", \"Text 3\"])
@@ -19000,7 +19000,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.get_by_label(\"Subscribe to newsletter\")
         await expect(locator).to_be_checked()
@@ -19070,7 +19070,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\"button.submit\")
         await expect(locator).to_be_disabled()
@@ -19118,7 +19118,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.get_by_role(\"textbox\")
         await expect(locator).to_be_editable()
@@ -19166,7 +19166,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\"div.warning\")
         await expect(locator).to_be_empty()
@@ -19212,7 +19212,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator(\"button.submit\")
         await expect(locator).to_be_enabled()
@@ -19261,7 +19261,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.locator('.my-element')
         await expect(locator).to_be_hidden()
@@ -19365,7 +19365,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.get_by_role(\"textbox\")
         await expect(locator).to_be_focused()
@@ -19414,7 +19414,7 @@ class LocatorAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         locator = page.get_by_role(\"button\")
         # Make sure at least some part of element intersects viewport.
@@ -19474,7 +19474,7 @@ class APIResponseAssertions(AsyncBase):
         **Usage**
 
         ```py
-        from playwright.async_api import expect
+        from custom_playwright.async_api import expect
 
         # ...
         await expect(response).to_be_ok()

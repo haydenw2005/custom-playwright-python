@@ -14,7 +14,7 @@
 
 import pytest
 
-from playwright.async_api import Page, TimeoutError, expect
+from custom_playwright.async_api import Page, TimeoutError, expect
 from tests.server import Server
 
 

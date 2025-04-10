@@ -15,8 +15,8 @@
 from asyncio import AbstractEventLoop
 from typing import Optional
 
-from playwright._impl._helper import Error
-from playwright._impl._page import Page
+from custom_playwright._impl._helper import Error
+from custom_playwright._impl._page import Page
 
 
 class WebError:

@@ -16,14 +16,14 @@ import collections.abc
 from typing import Any, List, Optional, Pattern, Sequence, Union
 from urllib.parse import urljoin
 
-from playwright._impl._api_structures import ExpectedTextValue, FrameExpectOptions
-from playwright._impl._connection import format_call_log
-from playwright._impl._errors import Error
-from playwright._impl._fetch import APIResponse
-from playwright._impl._helper import is_textual_mime_type
-from playwright._impl._locator import Locator
-from playwright._impl._page import Page
-from playwright._impl._str_utils import escape_regex_flags
+from custom_playwright._impl._api_structures import ExpectedTextValue, FrameExpectOptions
+from custom_playwright._impl._connection import format_call_log
+from custom_playwright._impl._errors import Error
+from custom_playwright._impl._fetch import APIResponse
+from custom_playwright._impl._helper import is_textual_mime_type
+from custom_playwright._impl._locator import Locator
+from custom_playwright._impl._page import Page
+from custom_playwright._impl._str_utils import escape_regex_flags
 
 
 class AssertionsBase:

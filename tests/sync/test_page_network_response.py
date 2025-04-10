@@ -15,7 +15,7 @@
 import pytest
 from twisted.web import http
 
-from playwright.sync_api import Error, Page
+from custom_playwright.sync_api import Error, Page
 from tests.server import Server
 
 

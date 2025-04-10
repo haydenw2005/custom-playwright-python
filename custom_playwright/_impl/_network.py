@@ -35,7 +35,7 @@ from typing import (
 )
 from urllib import parse
 
-from playwright._impl._api_structures import (
+from custom_playwright._impl._api_structures import (
     Headers,
     HeadersArray,
     RemoteAddr,
@@ -43,21 +43,21 @@ from playwright._impl._api_structures import (
     ResourceTiming,
     SecurityDetails,
 )
-from playwright._impl._connection import (
+from custom_playwright._impl._connection import (
     ChannelOwner,
     from_channel,
     from_nullable_channel,
 )
-from playwright._impl._errors import Error
-from playwright._impl._event_context_manager import EventContextManagerImpl
-from playwright._impl._helper import locals_to_params
-from playwright._impl._waiter import Waiter
+from custom_playwright._impl._errors import Error
+from custom_playwright._impl._event_context_manager import EventContextManagerImpl
+from custom_playwright._impl._helper import locals_to_params
+from custom_playwright._impl._waiter import Waiter
 
 if TYPE_CHECKING:  # pragma: no cover
-    from playwright._impl._browser_context import BrowserContext
-    from playwright._impl._fetch import APIResponse
-    from playwright._impl._frame import Frame
-    from playwright._impl._page import Page
+    from custom_playwright._impl._browser_context import BrowserContext
+    from custom_playwright._impl._fetch import APIResponse
+    from custom_playwright._impl._frame import Frame
+    from custom_playwright._impl._page import Page
 
 
 class FallbackOverrideParameters(TypedDict, total=False):
@@ -352,7 +352,7 @@ class Route(ChannelOwner):
             params["headers"] = (
                 params["headers"] if params.get("headers") else response.headers
             )
-            from playwright._impl._fetch import APIResponse
+            from custom_playwright._impl._fetch import APIResponse
 
             if body is None and path is None and isinstance(response, APIResponse):
                 if response._request._connection is self._connection:

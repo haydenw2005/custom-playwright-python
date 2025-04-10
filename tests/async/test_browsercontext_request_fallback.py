@@ -15,7 +15,7 @@
 import asyncio
 from typing import Any, Callable, Coroutine, cast
 
-from playwright.async_api import BrowserContext, Page, Request, Route
+from custom_playwright.async_api import BrowserContext, Page, Request, Route
 from tests.server import Server
 
 

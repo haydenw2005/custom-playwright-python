@@ -21,7 +21,7 @@ from typing import Any, cast
 
 import pytest
 
-from playwright.sync_api import Browser, BrowserContext, Error, Page, Route, expect
+from custom_playwright.sync_api import Browser, BrowserContext, Error, Page, Route, expect
 from tests.server import Server
 
 

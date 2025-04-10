@@ -15,7 +15,7 @@
 import subprocess
 import sys
 
-from playwright._impl._driver import compute_driver_executable, get_driver_env
+from custom_playwright._impl._driver import compute_driver_executable, get_driver_env
 
 
 def main() -> None:
