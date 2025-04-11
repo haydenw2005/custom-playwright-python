@@ -19,8 +19,12 @@ from custom_playwright._impl import _driver
 
 def main():
     try:
-        driver = _driver.compute_driver_executable()
-        print(f"✅ custom-playwright is installed.\nDriver: {driver}")
+        driver_executable, driver_cli  = _driver.compute_driver_executable()
+        print(f"✅ custom-playwright is installed.\nDriver: {driver_executable}")
+        completed_process = subprocess.run(
+                [driver_executable, driver_cli, *sys.argv[1:]], env=_driver.get_driver_env()
+            )
+        sys.exit(completed_process.returncode)
     except FileNotFoundError as e:
         print(f"❌ Driver missing: {e}")
         print("If you're seeing this in dev, re-run: python setup.py bdist_wheel")
